@@ -1,0 +1,22 @@
+# William Thing
+# CSE374 HW2 part 4
+#!/bin/bash
+# Jan 19, 2015
+
+if [ $# -lt 2 ]
+then
+	>&2 echo "$0 error: not enough arguments"
+	exit 1
+else
+	first="$1"
+	let total=0
+	date >>"$first"
+	shift
+	for i in "$@"
+	do
+		wc -l "$i" >>"$first"
+		let total=$total+$(wc -l < "$i")
+	done
+	echo "$total total" >>"$first"
+fi
+	
