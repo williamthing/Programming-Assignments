@@ -1,6 +1,7 @@
 -- William Thing
 -- CSE414
 -- Homework 1
+-- sqlite3
 
 .header on
 .nullvalue NULL
