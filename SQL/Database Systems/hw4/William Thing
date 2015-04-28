@@ -1,0 +1,18 @@
+William Thing
+CSE 414
+Homework 4
+Relational Database
+
+1.
+
+Which of the following identities are correct? In each case, either answer YES, or answer NO and give a counterexample: 
+
+δ(δ(R)) = δ(R) 
+
+ΠL(ΠL(R)) = ΠL(R), where L = a set of attributes 
+
+ΠK(ΠL(R)) = ΠK,L(R), where K, L = sets of attributes 
+
+σC(σC(R)) = σC(R), where C = a condition 
+
+γL, agg(A)(γL, agg(A)(R)) = γL, agg(A)(R), where L = a set of group-by attributes, agg is an aggregate operator, and A is an attribute
