@@ -1,0 +1,13 @@
+ssh -o "ServerAliveInterval 10" -i cse414.pem hadoop@ec2-54-165-3-104.compute-1.amazonaws.com
+
+ssh -o "ServerAliveInterval 10" -i cse414.pem hadoop@ec2-52-6-224-52.compute-1.amazonaws.com
+
+ssh -L 9100:localhost:9100 -o "ServerAliveInterval 10" -i cse414.pem hadoop@ec2-52-6-224-52.compute-1.amazonaws.com
+
+
+ssh -L 9100:localhost:9100 -o "ServerAliveInterval 10" -i cse414.pem hadoop@ec2-52-7-118-212.compute-1.amazonaws.com
+
+
+scp -o "ServerAliveInterval 10" -i cse414.pem hadoop@ec2-52-6-224-52.compute-1.amazonaws.com:example2A.txt .
+
+scp -o "ServerAliveInterval 10" -i cse414.pem hadoop@ec2-52-7-118-212.compute-1.amazonaws.com:example4.txt .

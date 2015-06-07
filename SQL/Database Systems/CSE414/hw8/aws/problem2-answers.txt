@@ -1,0 +1,30 @@
+William Thing
+CSE414
+Homework 8
+
+problem2-answers.txt
+
+Total MapReduce jobs: 4
+Total run time: 3mins 37sec 
+
+1. 
+	Map tasks: 33
+	Reduce tasks: 3
+	MapReduce run time: 1mins 59sec
+
+2. 
+	Map tasks: 1
+	Reduce tasks: 1
+	MapReduce run time: 36sec
+
+3. 
+	Map tasks: 1
+	Reduce tasks: 1
+	MapReduce run time: 30sec
+
+4. 
+	Map tasks: 1
+	Reduce tasks: 1
+	MapReduce run time: 32sec
+
+	

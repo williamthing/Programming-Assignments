@@ -21,7 +21,7 @@ public class Query {
 
 	// DB Connection
 	private Connection conn;
-        private Connection customerConn;
+    private Connection customerConn;
 
 	// Canned queries
 
@@ -34,10 +34,14 @@ public class Query {
 	private static final String DIRECTOR_MID_SQL = "SELECT y.* "
 					 + "FROM movie_directors x, directors y "
 					 + "WHERE x.mid = ? and x.did = y.id";
+
+	// Search movies 
+	private static final String SEARCH_SQL =
+		"SELECT * FROM movie WHERE name LIKE ('%' + ? + '%') ORDER BY id";
+	
 	private PreparedStatement directorMidStatement;
 
 	/* uncomment, and edit, after your create your own customer database */
-	/*
 	private static final String CUSTOMER_LOGIN_SQL = 
 		"SELECT * FROM customer WHERE login = ? and password = ?";
 	private PreparedStatement customerLoginStatement;
@@ -51,9 +55,7 @@ public class Query {
 
 	private static final String ROLLBACK_SQL = "ROLLBACK TRANSACTION";
 	private PreparedStatement rollbackTransactionStatement;
-	*/
 	
-
 	public Query(String configFilename) {
 		this.configFilename = configFilename;
 	}
@@ -113,12 +115,13 @@ public class Query {
 		directorMidStatement = conn.prepareStatement(DIRECTOR_MID_SQL);
 
 		/* uncomment after you create your customers database */
-		/*
+		
 		customerLoginStatement = customerConn.prepareStatement(CUSTOMER_LOGIN_SQL);
 		beginTransactionStatement = customerConn.prepareStatement(BEGIN_TRANSACTION_SQL);
 		commitTransactionStatement = customerConn.prepareStatement(COMMIT_SQL);
 		rollbackTransactionStatement = customerConn.prepareStatement(ROLLBACK_SQL);
-		*/
+		
+
 
 		/* add here more prepare statements for all the other queries you need */
 		/* . . . . . . */
@@ -163,7 +166,7 @@ public class Query {
 		/* authenticates the user, and returns the user id, or -1 if authentication fails */
 
 		/* Uncomment after you create your own customers database */
-		/*
+		
 		int cid;
 
 		customerLoginStatement.clearParameters();
@@ -174,7 +177,8 @@ public class Query {
 		else cid = -1;
 		cid_set.close();
 		return(cid);
-		 */
+		
+
 		return (55);
 	}
 
